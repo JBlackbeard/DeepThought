@@ -9,26 +9,15 @@
           <h2 class="subtitle">{{ page.description }}</h2>
           <div class="columns is-multiline is-gapless">
             <div class="column is-8">
-              {{ macros::page_publish_metadata(page=page) }}
+              {{ macros::page_publish_metadata(page=page) }} {{ macros::page_content_metadata(page=page) }}
             </div>
             <div class="column is-4 has-text-right-desktop">
-              {{ macros::page_content_metadata(page=page) }}
-            </div>
-            <div class="column is-4">
-              {% if page.taxonomies.categories %} {{
-              macros::render_categories(categories=page.taxonomies.categories)
-              }} {% endif %}
-            </div>
-            <div class="column is-8 has-text-right-desktop">
               {% if page.taxonomies.tags %} {{
               macros::render_tags(tags=page.taxonomies.tags) }} {% endif %}
             </div>
           </div>
           <div class="content has-text-justified">
             {{ page.content | safe }}
-          </div>
-          <div class="container has-text-centered">
-            {{ macros::page_share_links(page=page) }}
           </div>
         </article>
       </div>
