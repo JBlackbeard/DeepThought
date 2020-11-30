@@ -5,10 +5,9 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title">
-        <span class="icon">
-          <i class="fas fa-folder"></i>
-          <i class="fas fa-folder" style="position: relative;left: -15px;top: 7px;"></i>
-        </span>
+        <svg class="icon" aria-hidden="true" focusable="false">
+          <use xlink:href="/sprite/icons.svg#folder-open"></use>
+        </svg>
         Categories
       </h1>
       <h2 class="subtitle">
@@ -25,8 +24,9 @@
     {% for category in terms %}
     <span class="my-3 mx-2" style="display: inline-block;">
       <a class="link" href="{{ get_taxonomy_url(kind="categories", name=category.name) }}">
-        <span class="icon"><i
-            class="fas fa-folder"></i></span>{{ category.name }}<sup>{{ category.pages | length }}</sup>
+        <svg class="icon" aria-hidden="true" focusable="false">
+          <use xlink:href="/sprite/icons.svg#bars"></use>
+        </svg> {{ category.name }}<sup>{{ category.pages | length }}</sup>
       </a>
     </span>
     {% endfor %}

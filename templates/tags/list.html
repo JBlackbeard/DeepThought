@@ -5,7 +5,9 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title">
-        <span class="icon"><i class="fas fa-tags"></i></span> Tags
+        <svg class="icon" aria-hidden="true" focusable="false">
+          <use xlink:href="/sprite/icons.svg#tag"></use>
+        </svg> Tags
       </h1>
       <h2 class="subtitle">
         {{ terms | length }} tags in total
@@ -21,10 +23,12 @@
     {% for tag in terms %}
     <span class="my-3 mx-2" style="display: inline-block;">
       <a class="link" href="{{ get_taxonomy_url(kind="tags", name=tag.name) }}">
-        <span class="icon"><i class="fas fa-tag"></i></span>{{ tag.name }}<sup>{{ tag.pages | length }}</sup>
+        <svg class="icon icon-small" aria-hidden="true" focusable="false">
+          <use xlink:href="/sprite/icons.svg#tag"></use>
+        </svg> {{ tag.name }}<sup>{{ tag.pages | length }}</sup>
       </a>
-    </span>
-    {% endfor %}
+
+      {% endfor %}
   </div>
 </section>
 {% endblock content %}

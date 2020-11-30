@@ -5,7 +5,9 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title has-text-centered">
-        <span class="icon"><i class="fas fa-tag"></i></span> {{ term.name }}
+        <svg class="icon icon-small" aria-hidden="true" focusable="false">
+          <use xlink:href="/sprite/icons.svg#tag"></use>
+        </svg> {{ term.name }}
       </h1>
     </div>
   </div>
@@ -40,7 +42,7 @@
           </div>
 
           <a class="read-more" href="{{ page.permalink }}">
-            Read More <span class="icon is-small"><i class="fas fa-arrow-right fa-xs"></i></span>
+            Read More
           </a>
         </article>
         {% endfor %}
@@ -61,9 +63,9 @@
           {% if paginator.previous %}
           <div class="level-item has-text-centered">
             <a class="button is-black is-outlined" href='{{ paginator.previous }}'>
-              <span class="icon mr-2">
-                <i class="fas fa-arrow-circle-left"></i>
-              </span>
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use xlink:href="/sprite/icons.svg#chevron-left"></use>
+              </svg>
               Previous Page
             </a>
           </div>
@@ -72,9 +74,9 @@
           <div class="level-item has-text-centered">
             <a class="button is-black is-outlined" href='{{ paginator.next }}'>
               Next Page
-              <span class="icon ml-2">
-                <i class="fas fa-arrow-circle-right"></i>
-              </span>
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use xlink:href="/sprite/icons.svg#chevron-right"></use>
+              </svg>
             </a>
           </div>
           {% endif %}

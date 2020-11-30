@@ -30,6 +30,7 @@
             <li>
               <a class="is-size-7" href="{{ h1.permalink | safe }}">
                 {{ h1.title }}
+                Hello
               </a>
               {% if h1.children %}
               <ul>
@@ -60,48 +61,38 @@ page.lighter or page.heavier %}
         <nav class="level">
           {% if page.later %}
           <div class="level-item has-text-centered">
-            <a
-              class="button is-black is-outlined"
-              href="{{ page.later.permalink }}"
-            >
-              <span class="icon mr-2">
-                <i class="fas fa-arrow-circle-left"></i>
-              </span>
+            <a class="button is-black is-outlined" href="{{ page.later.permalink }}">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use xlink:href="/sprite/icons.svg#chevron-left"></use>
+              </svg>
               {{ page.later.title }}
             </a>
           </div>
           {% endif %} {% if page.earlier %}
           <div class="level-item has-text-centered">
-            <a
-              class="button is-black is-outlined"
-              href="{{ page.earlier.permalink }}"
-            >
-              {{ page.earlier.title }}<span class="icon ml-2">
-                <i class="fas fa-arrow-circle-right"></i>
-              </span>
+            <a class="button is-black is-outlined" href="{{ page.earlier.permalink }}">
+              {{ page.earlier.title }}
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use xlink:href="/sprite/icons.svg#chevron-right"></use>
+              </svg>
             </a>
           </div>
           {% endif %} {% if page.heavier %}
           <div class="level-item has-text-centered">
-            <a
-              class="button is-black is-outlined"
-              href="{{ page.heavier.permalink }}"
-            >
-              <span class="icon mr-2">
-                <i class="fas fa-arrow-circle-left"></i>
-              </span>
+            <a class="button is-black is-outlined" href="{{ page.heavier.permalink }}">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use xlink:href="/sprite/icons.svg#chevron-left"></use>
+              </svg>
               {{ page.heavier.title }}
             </a>
           </div>
           {% endif %} {% if page.lighter %}
           <div class="level-item has-text-centered">
-            <a
-              class="button is-black is-outlined"
-              href="{{ page.lighter.permalink }}"
-            >
-              {{ page.lighter.title }}<span class="icon ml-2">
-                <i class="fas fa-arrow-circle-right"></i>
-              </span>
+            <a class="button is-black is-outlined" href="{{ page.lighter.permalink }}">
+              {{ page.lighter.title }}
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use xlink:href="/sprite/icons.svg#chevron-right"></use>
+              </svg>
             </a>
           </div>
           {% endif %}
@@ -130,9 +121,5 @@ config.extra.commenting.hyvor %}
     id: window.btoa(encodeURIComponent(escape(window.location.href)))
   };
 </script>
-<script
-  async
-  src="//talk.hyvor.com/web-api/embed"
-  type="text/javascript"
-></script>
+<script async src="//talk.hyvor.com/web-api/embed" type="text/javascript"></script>
 {% endif %} {% endblock %}
