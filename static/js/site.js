@@ -169,7 +169,7 @@ function search() {
 }
 
 $(document).ready(function () {
-  mermaid.initialize({ startOnLoad: true });
+  //mermaid.initialize({ startOnLoad: true });
 
   if (localStorage.getItem("theme") === "dark") {
     $("body").attr("theme", "dark");
