@@ -46,12 +46,14 @@ video[theme="dark"] {
   }
 }
 
+
 $breakpoint-mobile: 768px;
 @media (max-width: $breakpoint-mobile) {
   body {
     font: 85% $font-stack;
   }
 }
+
 
 /**
  * Visually hidden accessible label
