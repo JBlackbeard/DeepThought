@@ -1,24 +1,18 @@
 {% macro social_links(social_config) %}
 <p class="is-size-4">
-  {% if social_config.facebook %}
-  <a class="link" href="https://facebook.com/{{ social_config.facebook }}" target="_blank">
-    <span class="icon is-medium">
-      <i class="fab fa-facebook"></i>
-    </span>
-  </a>
-  {% endif %}
+
   {% if social_config.twitter %}
   <a class="link" href="https://twitter.com/{{ social_config.twitter }}" target="_blank">
-    <span class="icon is-medium">
-      <i class="fab fa-twitter"></i>
-    </span>
+    <svg class="icon" aria-hidden="true" focusable="false">
+      <use xlink:href="/sprite/icons.svg#simple-twitter"></use>
+    </svg>
   </a>
   {% endif %}
   {% if social_config.linkedin %}
   <a class="link" href="https://www.linkedin.com/in/{{ social_config.linkedin }}" target="_blank">
-    <span class="icon is-medium">
-      <i class="fab fa-linkedin"></i>
-    </span>
+    <svg class="icon" aria-hidden="true" focusable="false">
+      <use xlink:href="/sprite/icons.svg#simple-linkedin"></use>
+    </svg>
   </a>
   {% endif %}
   {% if social_config.github %}
@@ -29,16 +23,16 @@
     {% endif %}
     {% if social_config.stackoverflow %}
     <a class="link" href="https://stackoverflow.com/users/{{ social_config.stackoverflow }}" target="_blank">
-      <span class="icon is-medium">
-        <i class="fab fa-stack-overflow"></i>
-      </span>
+      <svg class="icon" aria-hidden="true" focusable="false">
+        <use xlink:href="/sprite/icons.svg#simple-stackoverflow"></use>
+      </svg>
     </a>
     {% endif %}
     {% if social_config.keybase %}
     <a class="link" href="https://keybase.io/{{ social_config.keybase }}" target="_blank">
-      <span class="icon is-medium">
-        <i class="fab fa-keybase"></i>
-      </span>
+      <svg class="icon" aria-hidden="true" focusable="false">
+        <use xlink:href="/sprite/icons.svg#keybase"></use>
+      </svg>
     </a>
     {% endif %}
     {% if config.generate_feed %}
