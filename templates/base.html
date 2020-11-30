@@ -28,7 +28,7 @@
   <meta name="theme-color" content="#ffffff">
 
 
-  <link rel = "stylesheet"  href = "/node_modules/bulma/css/bulma.css">
+  <link rel = "stylesheet"  href = "/node_modules/bulma/css/bulma.new.min.css">
   <link href='{{ get_url(path='site.css') }}' rel="stylesheet" />
 
   {% block custom_css %}
@@ -63,10 +63,13 @@
           </a>
           {% endfor %}
           <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
-            <svg class="icon" aria-hidden="true" focusable="false">
+            <svg class="icon " aria-hidden="true" focusable="false">
               <use xlink:href="/sprite/icons.svg#adjust"></use>
             </svg>
           </a>
+		  <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+
+		  </a>
         </div>
       </div>
     </div>
